@@ -5,7 +5,7 @@
     <title>Liste interactive de cadeaux de Noël</title>
     <meta name="description" content="Créer votre liste de cadeaux et envoyez-là à vos ami.e.s">
     <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
-    <script src="script.js" defer></script>
+    <script src="script.js" defer></script> <!-- Le javascript est déjà lié. -->
   </head>
   <body>
     <a class="navbar-brand" href="#">L'Atelier du bonheur Mercantile</a>
@@ -30,12 +30,12 @@
       <input type="number" id="valeur">
     </div>
     <div class="d-grid gap-2">
-      <button>Ajouter</button>
+      <button onclick="ajouter()">Ajouter</button>  <!-- Cliquer sur le bouton va appeler la fonction ajouter. -->
       <br>
       <button>Annuler</button>
     </div>
     <h3>Ma liste</h3>
-    <p class="list">
+    <p class="list" id="maListe">
       <p>Crocs des fêtes : <span>14$</span></p>
       <p>Une tuque des fêtes :<span>42$</span></p>
       <p>Un chandail laid des fêtes :<span>25$</span></p>
