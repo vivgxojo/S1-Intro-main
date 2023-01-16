@@ -36,12 +36,12 @@
         <button>Annuler</button>
       </div>
       <h3>Ma liste</h3>
-      <div class="list" id="maListe">
+      <div class="list" id="maListe">                   <!-- Remplacer p par div -->
         <p>Crocs des fêtes : <span>14$</span></p>
-        <p>Une tuque des fêtes :<span>42$</span></p>
-        <p>Un chandail laid des fêtes :<span>25$</span></p>
+        <p>Une tuque des fêtes : <span>42$</span></p>
+        <p>Un chandail laid des fêtes : <span>25$</span></p>
       </div>
-      <p>Total: 81$</p>
+      <p>Total : <span id="total">81</span>$</p>                      <!-- Sortir le taotal de la liste et lui donner un id -->
       <p class="col-form-label h3">Destinataire:</p>
       <input id="email" type="text" onblur="ajouterEmail()">
       <div>
