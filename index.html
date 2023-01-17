@@ -24,7 +24,7 @@
       <h4 class="mb-3">Ajouter un item à la liste</h4>
       <div class="mb-3">
         <p>Description :</p>
-        <input type="text" id="desc" required></input>
+        <input type="text" id="desc" />
       </div>
       <div class="mb-4">
         <span>Valeur estimée ($) :</span><br>
@@ -43,11 +43,15 @@
       </div>
       <p>Total : <span id="total">81</span>$</p>                      <!-- Sortir le taotal de la liste et lui donner un id -->
       <p class="col-form-label h3">Destinataire:</p>
-      <input id="email" type="text" onblur="ajouterEmail()">
+      <input id="email" type="text" required onblur="ajouterEmail()">
       <div>
         <input type="submit" value="Confirmer et envoyer" />
-        <input type="reset" value="Recommencer" />
+        <input onclick="effacer()" type="submit" value="Recommencer" />
       </div>
+
+      <input hidden name="Item_1", value="Crocs des fêtes">
+      <input hidden name="Item_2", value="Une tuque des fêtes">
+      <input hidden name="Item_3", value="Un chandail laid des fêtes">
     </form>
   </body>
 </html>
