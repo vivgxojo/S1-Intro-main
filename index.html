@@ -20,7 +20,7 @@
     <h3>Liste de cadeaux de Maryse Mongeau</h3>
     <p class="text-muted ms-1 mb-3">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
                                     ami.e.s.</p>
-    <form method="post">
+    <form method="post">                    <!-- Ajouter la balise form, la méthode post va permettre d'envoyer par courriel -->
       <h4 class="mb-3">Ajouter un item à la liste</h4>
       <div class="mb-3">
         <p>Description :</p>
@@ -33,7 +33,7 @@
       <div class="d-grid gap-2">
         <input type="button" value="Ajouter" onclick="ajouter()" />  <!-- Cliquer sur le bouton va appeler la fonction ajouter. -->
         <br>
-        <button>Annuler</button>
+        <input type="reset" value="Annuler" />      <!-- Remplacer les <button> par des <input ... -->
       </div>
       <h3>Ma liste</h3>
       <div class="list" id="maListe">                   <!-- Remplacer p par div -->
@@ -41,17 +41,18 @@
         <p>Une tuque des fêtes : <span>42$</span></p>
         <p>Un chandail laid des fêtes : <span>25$</span></p>
       </div>
-      <p>Total : <span id="total">81</span>$</p>                      <!-- Sortir le taotal de la liste et lui donner un id -->
+      <p>Total : <span id="total">81</span>$</p>  <!-- Sortir le taotal de la liste et lui donner un id -->
       <p class="col-form-label h3">Destinataire:</p>
-      <input id="email" type="text" required onblur="ajouterEmail()">
+      <input id="email" type="text" onblur="ajouterEmail()" /> <!-- Ajouter l'email au formulaire -->
       <div>
-        <input type="submit" value="Confirmer et envoyer" />
-        <input onclick="effacer()" type="submit" value="Recommencer" />
+        <input type="submit" value="Confirmer et envoyer" /> <!-- Envoyer le formulaire par courriel -->
+        <input onclick="effacer()" type="submit" value="Recommencer" /> <!-- Efface le courriel et refresh la page -->
       </div>
 
-      <input hidden name="Item_1", value="Crocs des fêtes">
-      <input hidden name="Item_2", value="Une tuque des fêtes">
-      <input hidden name="Item_3", value="Un chandail laid des fêtes">
+      <!-- Préparer le contenu du courriel avec des input hidden -->
+      <input hidden name="Item_1" value="Crocs des fetes">
+      <input hidden name="Item_2" value="Une tuque des fetes">
+      <input hidden name="Item_3" value="Un chandail laid des fetes">
     </form>
   </body>
 </html>

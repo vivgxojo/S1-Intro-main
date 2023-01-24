@@ -1,4 +1,4 @@
-compteur = 4;
+compteur = 4; //Variable globale
 function ajouter(){
     let item = document.getElementById("desc").value;
     let prix = document.getElementById("valeur").value;     //Ajouter le prix
@@ -14,11 +14,11 @@ function ajouter(){
     let nouveauPrix = +ancienPrix + +prix;                          // +variable : convertir en numérique
     document.getElementById("total").innerText = nouveauPrix;
 
-    //Code non expliqué
+    //Créer des nouveaux input hidden dans le formulaire pour envoyer par courriel
     nouveauInput = document.createElement("input");
-    nouveauInput.setAttribute("value", item);
     nouveauInput.setAttribute("hidden",true);
     nouveauInput.setAttribute("name", "Item_"+compteur);
+    nouveauInput.setAttribute("value", item);
     document.forms[0].append(nouveauInput);
     compteur++;
     //alert("L'item est bien ajouté"); // Pop-up
